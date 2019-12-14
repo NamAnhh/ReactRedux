@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from 'antd';
 
-
 import { connect } from 'react-redux';
 import {postTask} from '../../../../actions/index';
 

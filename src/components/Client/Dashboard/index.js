@@ -3,7 +3,7 @@ import { Icon } from "antd";
 import Header from '../Header/index';
 import Footer from '../Footer/index';
 
-import { connect } from 'react-redux';
+import { connect } from 'react-redux';  //connect toi store
 import { fetchTaskRequest } from '../../../actions/index';
 
 class DashBoard extends React.Component {
@@ -19,29 +19,32 @@ class DashBoard extends React.Component {
     }
 
     render() {
-        const {tasks} = this.props
-        console.log('tasks',tasks)
+        const { tasks } = this.props
+        console.log('tasks', tasks)
         return (
             <div>
+                {/* header giữ nguyên */}
                 <Header />
                 <div>
+                    {/* màn hình sẽ thay đổi ở đây */}
                     <p>Đây là dashboard</p>
                     <Icon type="smile" />
                 </div>
+                {/* footer giữ nguyên */}
                 <Footer />
             </div>
         )
     }
 }
 
-// lay tat ca task tu store
+// lay tat ca du lieu task tu store
 const mapStateToProps = (state) => {
     return {
         tasks: state.vidu1Reducer
     }
 }
 
-// luu len store
+// luu du lieu len store
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchTaskRequest: (tasks) => {
