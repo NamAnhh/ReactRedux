@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import StudentList from './components/studentList'
+import Routerlinkk from './RouterLink/index';
 
 function App() {
   return (
     <div className="App">
-      <StudentList />
+      <Routerlinkk/>
     </div>
   );
 }

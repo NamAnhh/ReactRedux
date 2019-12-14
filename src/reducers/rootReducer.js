@@ -1,10 +1,10 @@
 
-import studentReducer from '../reducers/studentReducer';
+import vidu1Reducer from './vidu1Reducer';
 import { combineReducers } from 'redux';
 
 
 const appReducer = combineReducers({
-	studentRoot:studentReducer
+	vidu1Reducer,   // vidu1Reducer:vidu1Reducer
 })
 
 const rootReducer = (state, action) => {
