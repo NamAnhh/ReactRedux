@@ -1,7 +1,6 @@
 import React from 'react'
-import { Icon } from "antd";
-import Header from '../Header/index';
-import Footer from '../Footer/index';
+import { Row, Col, Button } from "antd";
+import "./styles.css";
 
 import { connect } from 'react-redux';  //connect toi store
 import { fetchTaskRequest } from '../../../actions/index';
@@ -22,17 +21,9 @@ class DashBoard extends React.Component {
         const { tasks } = this.props
         console.log('tasks', tasks)
         return (
-            <div className="dashboard">
-                {/* header giữ nguyên */}
-                <Header />
-                <div>
-                    {/* màn hình sẽ thay đổi ở đây */}
-                    <p>Đây là dashboard</p>
-                    <Icon type="smile" />
+                <div className="dashboard-left">
+                    dashboard
                 </div>
-                {/* footer giữ nguyên */}
-                <Footer />
-            </div>
         )
     }
 }

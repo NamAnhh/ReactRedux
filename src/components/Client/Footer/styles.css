@@ -1,4 +1,20 @@
 .footer{
-    height: 30px;
-    background-color: aquamarine;
+    height: 90px;
+    background-color: #336699;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.content-footer{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
 }

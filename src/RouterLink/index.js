@@ -7,6 +7,9 @@ import {
 
 //list
 import DashBoard from './../components/Client/Dashboard/index';
+import Intro from './../components/Client/Intro/index';
+
+//admin
 import AdminDashBoard from './../components/Admin/Dashboard/index';
 
 //add
@@ -25,6 +28,7 @@ function Routerlinkk() {
 
           {/* route client */}
           <Route path="/AddDashBoard" component={AddDashBoard} />
+          <Route path="/intro" component={Intro} />
           <Route path="/" component={DashBoard} />
         </Switch>
       </div>
