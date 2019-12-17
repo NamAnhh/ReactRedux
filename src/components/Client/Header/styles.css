@@ -1,4 +1,37 @@
-.header{
-    height: 30px;
-    background-color: aquamarine;
+
+.container{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
 }
+
+.header{
+    background-image: url(../../../images/logo.PNG);
+    height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    height: 40px;
+    background-color: #336699;
+}
+
+.main-navbar{
+    margin: 0 184.5px;
+    height: 40px;
+    padding:  0 10px;
+    display: inline-block;
+}
+
+.abc:hover{
+    color: #fff;
+    background-color: #004F87
+}
+
+.ant-dropdown-menu-item .ant-dropdown-menu-item-active{
+    color: red;
+}
+
+

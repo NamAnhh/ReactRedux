@@ -22,7 +22,7 @@ class DashBoard extends React.Component {
         const { tasks } = this.props
         console.log('tasks', tasks)
         return (
-            <div>
+            <div className="dashboard">
                 {/* header giữ nguyên */}
                 <Header />
                 <div>
