@@ -19,11 +19,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.main-navbar{
-    margin: 0 208px 0 184.5px;
-    height: 40px;
-    padding:  0 10px;
-    display: inline-block;
+.navbar-smallScreen{
+    display: none;
 }
 
 .dropdown-menu-item{
@@ -36,19 +33,11 @@
 }
 
 .datetime{
-    height: 48px;
-}
-
-.main-datetime{
-    height: 48px;
-    margin: 2px 208px 0 184.5px;
+    margin: 2px 0;
     color: #333;
     background-color: #f5f5f5;
     border-color: #ddd;
-    display: flex;
-    align-items: center;
     padding-left: 15px;
-    flex-direction: row; 
     border-bottom: 1px solid transparent;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
@@ -59,3 +48,13 @@
     line-Height: '20px';
     margin-top: 1.16vh;
 }
+
+@media only screen and (max-width: 753px) {
+    .navbar {
+      display: none;
+    }
+    .navbar-smallScreen{
+        display: block;
+    }
+  }
+  
