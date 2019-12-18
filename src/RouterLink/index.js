@@ -21,17 +21,15 @@ import AddDashBoard from './../components/Client/Dashboard/Add/index';
 function Routerlinkk() {
   return (
     <Router>
-      <div>
-        <Switch>
-          {/* route admin */}
-          <Route path="/admin" component={AdminDashBoard} />
+      <Switch>
+        {/* route admin */}
+        <Route path="/admin" component={AdminDashBoard} />
 
-          {/* route client */}
-          <Route path="/AddDashBoard" component={AddDashBoard} />
-          <Route path="/intro" component={Intro} />
-          <Route path="/" component={DashBoard} />
-        </Switch>
-      </div>
+        {/* route client */}
+        <Route path="/AddDashBoard" component={AddDashBoard} />
+        <Route path="/intro" component={Intro} />
+        <Route path="/" component={DashBoard} />
+      </Switch>
     </Router>
   );
 }

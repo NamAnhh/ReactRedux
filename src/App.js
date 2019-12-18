@@ -6,7 +6,7 @@ import Footer from '../src/components/Client/Footer/index';
 import DashboardResults from '../src/components/Client/DashboardResults/index';
 import Iframe from 'react-iframe'
 
-import { Row, Col, Button,Icon } from "antd";
+import { Row, Col, Button, Icon } from "antd";
 
 const resultArray = [
   { id: '1', title: 'Kết quả thi toàn quốc' },
@@ -17,8 +17,8 @@ const resultArray = [
   { id: '5', title: 'Kết quả khu vực 5 - Cần Thơ' }
 ]
 
-const results = resultArray.map(x =>
-  <div className="card">
+const results = resultArray.map((x,index) =>
+  <div key={index} className="card">
     <div className="header-card">
       {x.title}
     </div>
@@ -36,9 +36,9 @@ const footerContentArray = [
   { content: 'Video Hội khỏe phù đổng lần thứ 9 năm 2020 ' },
 ]
 
-const footerContents = footerContentArray.map(x =>
-  <div className="footer-content">
-    <Icon type="caret-right" style={{color:'#F38032'}}/><a type="link" >{x.content} </a>
+const footerContents = footerContentArray.map((x,index) =>
+  <div key={index} className="footer-content">
+    <Icon type="caret-right" style={{ color: '#F38032' }} /><a >{x.content} </a>
   </div>
 )
 
@@ -53,10 +53,8 @@ function App() {
           <div className="main-dashboard">
             {/* màn hình sẽ thay đổi ở đây */}
             <Row>
-              <Col span={16}>
-                <div>
+              <Col span={16} style={{paddingRight:'18px'}}>
                   <Routerlinkk />
-                </div>
               </Col>
               <Col span={8}>
                 {results}

@@ -3,6 +3,7 @@ import './styles.css';
 import styles from './styles';
 
 import { Menu, Dropdown, Button, Row, Collapse, } from 'antd';
+import Iframe from 'react-iframe'
 
 const { Panel } = Collapse;
 
@@ -57,7 +58,7 @@ class Header extends React.Component {
                 {/* end screen lon */}
 
                 {/* screen nho */}
-                <Collapse className="navbar-smallScreen" style={{color:'#336699'}} defaultActiveKey={['1']}>
+                <Collapse className="navbar-smallScreen" style={{ color: '#336699' }} defaultActiveKey={['1']}>
                     <Panel style={{ color: '#336699' }} header="Đây là navbar" key="1">
                         <p>TRANG CHỦ</p>
                         <p>GIỚI THIỆU</p>
@@ -68,7 +69,15 @@ class Header extends React.Component {
                 <div className="datetime">
                     <Row style={styles.mainDatetime} >
                         <h3 className="date">Thứ ba, 17 / 12 / 2019 - </h3>
-                        <iframe src="http://free.timeanddate.com/clock/i53ik6xa/n95/tlvn42/fs17/tct/pct" frameborder="0" width="94" height="22" allowtransparency="true"></iframe>
+                        <Iframe url="http://free.timeanddate.com/clock/i53ik6xa/n95/tlvn42/fs17/tct/pct"
+                            width="94px"
+                            height="22px"
+                            id="myId"
+                            className="myClassname"
+                            frameBorder="0"
+                            allowtransparency="true"
+                            display="initial"
+                            position="relative" />
                     </Row>
                 </div>
             </div>
