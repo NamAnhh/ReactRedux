@@ -22,9 +22,6 @@ function Routerlinkk() {
   return (
     <Router>
       <Switch>
-        {/* route admin */}
-        <Route path="/admin" component={AdminDashBoard} />
-
         {/* route client */}
         <Route path="/AddDashBoard" component={AddDashBoard} />
         <Route path="/intro" component={Intro} />

@@ -8,7 +8,7 @@ import styles from './styles';
 import ContentTittle from '../../TemplateComponents/ContentTittle/index';
 
 const contentDetailArray = [
-    { content: 'TP Hồ Chí Minh vững vàng ngôi đầu tại Hội khỏe Phù Đổng toàn quốc', updateAt: 'Ngày 11 tháng 08 năm 2020' },
+    { content: 'TP Hồ Chí Minh vững vàng ngôi đầu tại Hội khỏe Phù Đổng toàn quốc 1', updateAt: 'Ngày 11 tháng 08 năm 2020' },
     { content: 'Nghệ An vô địch bóng chuyền nam, nữ tại HKPĐ toàn quốc ', updateAt: 'Ngày 11 tháng 08 năm 2020' },
     { content: 'Khai mạc môn thi đấu cuối cùng tại HKPĐ toàn quốc', updateAt: 'Ngày 11 tháng 08 năm 2020' },
     { content: 'Khai mạc môn Cờ vua tại HKPĐ toàn quốc ', updateAt: 'Ngày 11 tháng 08 năm 2020' },

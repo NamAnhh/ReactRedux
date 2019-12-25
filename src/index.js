@@ -7,10 +7,31 @@ import { Provider } from 'react-redux'
 import configureStore from './store';
 import 'antd/dist/antd.css'; // css ant design
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+
+import AdminDashBoard from './components/Admin/Dashboard/index';
+import AdminLogin from './components/Admin/AdminLogin/index';
+import RouterLink from './RouterLink/index';
+
+
 ReactDOM.render(
     <Provider store={configureStore()}>
-        <App />
-    </Provider>,
+        {/* <App /> */}
+        <Router>
+            <Switch>
+                {/* route admin */}
+                <Route path="/admin" component={AdminDashBoard} />
+                <Route path="/adminlogin" component={AdminLogin} />
+                <Route path="/home" component={App} />
+                {/* route client */}
+                <Route path="/" component={App} />
+            </Switch>
+        </Router>
+    </Provider >,
     document.getElementById('root')
 );
 

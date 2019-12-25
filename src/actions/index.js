@@ -9,7 +9,7 @@ export const fetchTask = (task) => {
     }
 }
 
-// ung dung redux-thunk sau khi call API thi get du lieu
+// ung dung redux-thunk sau khi call API thi get luon du lieu
 export const fetchTaskRequest = () => {
     return dispatch => {
         return callApi('todos', 'GET', null, null).then(res => {

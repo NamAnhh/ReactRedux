@@ -2,8 +2,9 @@ import React from 'react';
 import './styles.css';
 import styles from './styles';
 
-import { Menu, Dropdown, Button, Row, Collapse, } from 'antd';
+import { Menu, Dropdown, Button, Row, Collapse } from 'antd';
 import Iframe from 'react-iframe'
+import { withRouter } from "react-router-dom";
 
 const { Panel } = Collapse;
 
@@ -38,6 +39,25 @@ const menu = (
 );
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false
+        }
+    }
+
+    gotoDashboard = () => {
+        this.props.history.push("/home");
+    }
+
+    gotoAdminLogin = () => {
+        this.props.history.push("/adminlogin");
+    }
+
+    gotoIntro = () => {
+        this.props.history.push("/intro");
+    }
+
     render() {
         return (
             <div className="container">
@@ -45,13 +65,13 @@ class Header extends React.Component {
                 {/* screen lon */}
                 <div className="navbar">
                     <Row style={styles.mainNavbar}>
-                        <Button style={styles.btn}>TRANG CHỦ</Button>
-                        <Button style={styles.btn} >Giới thiệu</Button>
+                        <Button onClick={this.gotoDashboard} style={styles.btn}>TRANG CHỦ</Button>
+                        <Button onClick={this.gotoIntro} style={styles.btn} >Giới thiệu</Button>
                         <Button style={styles.btn}>Văn bản hướng dẫn</Button>
                         <Dropdown overlay={menu} placement="bottomLeft">
                             <Button style={styles.btn} >KẾT QUẢ</Button>
                         </Dropdown>
-                        <Button style={styles.btn} >ĐĂNG KÝ TRỰC TUYẾN</Button>
+                        <Button onClick={this.gotoAdminLogin} style={styles.btn} >ĐĂNG KÝ TRỰC TUYẾN</Button>
                         <Button style={styles.btn} >LIÊN HỆ</Button>
                     </Row>
                 </div>
@@ -85,4 +105,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header
+export default withRouter(Header)
